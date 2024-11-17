@@ -1,0 +1,44 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+html {
+    font-family: Poppins, sans-serif;
+}
+
+.block {
+    display: block;
+}
+
+.light {
+    font-weight: 200;
+}
+
+.regular {
+    font-weight: 400;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.h1__description {
+
+}
+
+.container {
+
+}
+
+.card {
+
+}
+
+.card__title {
+
+}
+
+.card__description {
+
+}
