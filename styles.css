@@ -1,10 +1,41 @@
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; margin-bottom: 1rem}
 .attribution a { color: hsl(228, 45%, 44%); }
 
+:root {
+    /* PRIMARY */
+    --red: #ea5353;
+    --cyan: #45d3d3;
+    --orange: #fcaf4a;
+    --blue: #549ef2;
 
+    /* NEUTRAL */
+    --very-dark-blue: #4c4e61;
+    --grayish-blue: #a3a5ae;
+    --very-light-gray: #fafafa;
+
+    /* HEADER */
+    --header__h1-font-size: 2.2rem;
+    --header__p-font-size: 0.9375rem;
+    --header__p-spacing: 55ch;
+
+    /* CARDS */
+    --card__width: 21.875rem; /* 19.375rem mobile */
+    --card__height: 15.625rem; /* 13.875rem mobile */
+    --card__padding: 2rem; /* 1.75rem mobile */
+    --card__h2-font-size: 1.25rem;
+    --card__p-font-size: 0.8125rem;
+    --card__icon-scale: 1;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
 
 html {
     font-family: Poppins, sans-serif;
+    background-color: var(--very-light-gray);
 }
 
 .block {
@@ -23,22 +54,166 @@ html {
     font-weight: 600;
 }
 
-.h1__description {
+.center {
+    text-align: center;
+}
 
+h1 {
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    font-size: var(--header__h1-font-size);
+    letter-spacing: 0.018em;
+    color: var(--very-dark-blue);
+}
+
+.h1__description {
+    font-size: var(--header__p-font-size);
+    max-width: var(--header__p-spacing);
+    margin: 0 auto;
+    color: var(--grayish-blue);
 }
 
 .container {
+    margin: 4.2rem auto;
+    display: grid;
+    justify-content: center;
 
+    grid-template-columns: repeat(3, 21.875rem);
+    grid-template-rows: repeat(4, 1fr);
+        
+    gap: 1.875rem;
 }
 
 .card {
+    background-color: white;
+    width: var(--card__width);
+    height: var(--card__height);
+    padding: var(--card__padding);
 
+    border-radius: 10px;
+    box-shadow: #45d3d38f 0px 10px 15px 0px;
+
+    position: relative;
+
+    & h2 {
+        color: var(--very-dark-blue);
+        font-size: var(--card__h2-font-size);
+        margin: 0;
+    }
+
+    & p {
+        color: var(--grayish-blue);
+        font-size: var(--card__p-font-size);
+        margin-top: .6rem;
+        line-height: 1.4rem;
+    }
 }
 
-.card__title {
+.card__1 {
+    grid-row: 2 / 4;
+    grid-column: 1;
 
+    background: linear-gradient(
+        var(--cyan) 2%,
+        var(--very-light-gray) 2%
+    );
+
+    &::after {
+        content: url(images/icon-supervisor.svg);
+        position: absolute;
+        right: var(--card__padding);
+        bottom: var(--card__padding);
+        height: 64px;
+
+        transform-origin: bottom right;
+        transform: scale(var(--card__icon-scale));
+    }
 }
 
-.card__description {
+.card__2 {
+    grid-row: 1 / 3;
+    grid-column: 2;
 
+    background: linear-gradient(
+        var(--red) 2%,
+        var(--very-light-gray) 2%
+    );
+
+    &::after {
+        content: url(images/icon-team-builder.svg);
+        position: absolute;
+        right: var(--card__padding);
+        bottom: var(--card__padding);
+        height: 64px;
+
+        transform-origin: bottom right;
+        transform: scale(var(--card__icon-scale));
+    }
+}
+
+.card__3 {
+    grid-row: 3 / 5;
+    grid-column: 2;
+
+    background: linear-gradient(
+        var(--orange) 2%,
+        var(--very-light-gray) 2%
+    );
+
+    &::after {
+        content: url(images/icon-karma.svg);
+        position: absolute;
+        right: var(--card__padding);
+        bottom: var(--card__padding);
+        height: 64px;
+
+        transform-origin: bottom right;
+        transform: scale(var(--card__icon-scale));
+    }
+}
+
+.card__4 {
+    grid-row: 2 / 4;
+    grid-column: 3;
+
+    background: linear-gradient(
+        var(--blue) 2%,
+        var(--very-light-gray) 2%
+    );
+
+    &::after {
+        content: url(images/icon-calculator.svg);
+        position: absolute;
+        right: var(--card__padding);
+        bottom: var(--card__padding);
+        height: 64px;
+
+        transform-origin: bottom right;
+        transform: scale(var(--card__icon-scale));
+    }
+}
+
+@media screen and (max-width: 69.375rem) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 30rem) {
+
+    :root {
+        /* HEADER  */
+        --header__h1-font-size: 1.5rem;
+        --header__p-font-size: 0.9375rem;
+        --header__p-spacing: 32ch;
+
+        /* CARDS */
+        --card__width: 19.375rem;
+        --card__height: 13.875rem;
+        --card__padding: 1.75rem; 
+        --card__h2-font-size: 1.25rem;
+        --card__p-font-size: 0.8125rem;
+        --card__icon-scale: 0.9;
+    }
 }
