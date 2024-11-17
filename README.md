@@ -24,11 +24,11 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
 
 Desktop | Transition | Mobile
 
-<picture>
+<p>
   <img src="images/Four Card Feature Section Master (desktop).png" height="300" alt="desktop solution" hspace="15">
   <img src="images/Four Card Feature Section Master (transition).png" height="300" alt="transition solution" hspace="15">
   <img src="images/Four Card Feature Section Master (mobile).png" height="300" alt="mobile solution" hspace="15">
-</picture>
+</p>
 
 ### Links
 
