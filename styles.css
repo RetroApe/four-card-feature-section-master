@@ -85,7 +85,7 @@ h1 {
 }
 
 .card {
-    background-color: white;
+
     width: var(--card__width);
     height: var(--card__height);
     padding: var(--card__padding);
@@ -115,7 +115,7 @@ h1 {
 
     background: linear-gradient(
         var(--cyan) 2%,
-        var(--very-light-gray) 2%
+        white 2%
     );
 
     &::after {
@@ -136,7 +136,7 @@ h1 {
 
     background: linear-gradient(
         var(--red) 2%,
-        var(--very-light-gray) 2%
+        white 2%
     );
 
     &::after {
@@ -157,7 +157,7 @@ h1 {
 
     background: linear-gradient(
         var(--orange) 2%,
-        var(--very-light-gray) 2%
+        white 2%
     );
 
     &::after {
@@ -178,7 +178,7 @@ h1 {
 
     background: linear-gradient(
         var(--blue) 2%,
-        var(--very-light-gray) 2%
+        white 2%
     );
 
     &::after {
